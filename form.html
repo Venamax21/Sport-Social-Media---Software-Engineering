@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/form.css') }}">
+    <title>Make a Post</title> <!--This is a "Make a post" Navigation -->
+</head>
+<body>
+     <!-- Navigation Menu -->
+     <div class="topnav"> 
+        {% for item in nav.top %}
+        <a class="{{ 'active' if item.is_active else '' }}" href="{{ item.url }}">{{ item.label }}</a>
+        {% endfor %}
+    </div>
+
+    <h1>Post Here</h1> <!--this is the page TITLE -->
+    <h2>{{value2}}</h2>
+
+<!--     <form action="/action_page.php" method="POST">     -->
+<div class="Action">
+  <form action="{{ url_for('form_submit') }}" method="POST">
+    <label for="post"></label>
+
+    <textarea id="post" name = "text1" rows="3" cols="25"  placeholder="Haters will say Floyd Mayweather beat Conor" maxlength="250" style ="height:140px;width:500px;font-size:12px;border: none;" required></textarea>
+    <div class="bottom">
+      <p>Character limit: 250</p>
+      <input type="reset" value="CLEAR" border="10px">
+      <input type="submit" value="SUBMIT" border="10px">
+    </div>
+  </form> 
+
+</div>
+
+</body>
+</html>

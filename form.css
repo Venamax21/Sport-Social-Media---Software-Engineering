@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap');
+* {
+    font-family: 'Hedvig Letters Sans', sans-serif;
+    background-color: rgb(173,140,61);
+    color: white;
+}
+
+/* Header 1 style */
+h1 {
+    /* border: 2px #eee solid; */
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(173,140,61);
+}
+
+/* Header 2 style */
+h2 {
+    /* border: 2px #eee solid; */
+    text-align: center;
+    padding: 10px;
+    color: red;
+    background-color: rgb(173,140,61);
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(173,140,61);
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: rgb(253, 112, 41);
+    color: white;
+}
+
+
+#table1 {
+    border-collapse: collapse;
+    width: 100%;
+}
+.Action {
+    border: 1px solid #050505;
+    background-image: url("../conor.jpg");
+    background-size: cover;
+    height: 65vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+form {
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0;
+    background-color: rgb(173,140,61);
+}
+
+form p {
+    color: white;
+    margin: 0
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.2;
+}
+
+#table1 td, #table1 th {
+    border: 1px solid rgb(164, 162, 162);
+    padding: 8px;
+}
+
+#table1 tr:nth-child(even){background-color: #f2f2f2;}
+
+#table1 tr:hover {background-color: rgb(253, 112, 41);}
+
+#table1 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(173,140,61);
+    color: white;
+}
+  

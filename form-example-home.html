@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/form-example-home.css') }}">
+    <title>Home</title>
+    <style>
+        /* Initially hide the video */
+        .video-container {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <div class="topnav"> 
+        {% for item in nav.top %}
+        <a class="{{ 'active' if item.is_active else '' }}" href="{{ item.url }}">{{ item.label }}</a>
+        {% endfor %} 
+    </div>
+
+    <h1>Welcome to Sports Social Media</h1>
+
+    <div class="welcome">
+        <h3>This is the PLATFORM where Sports fans interact and engage in Live Sports Events</h3>
+        <h3>We are one of the fastest-growing SPORTS Social Media Platforms in the world!</h3>
+    </div>
+
+    <div style="text-align:center">
+        <audio controls autoplay>
+            <source src="{{ url_for('static', filename= 'songs/UCL_soccer.mp3') }}" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        // Show the video container and autoplay the video when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            var videoContainer = document.getElementById('videoContainer');
+            videoContainer.style.visibility = 'visible';
+        });
+    </script>
+</body>
+</html>

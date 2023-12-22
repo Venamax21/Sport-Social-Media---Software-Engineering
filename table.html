@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/form.css') }}">
+    <title>Sports Arena</title> <!--This is the navigation for Displaying POSTS -->
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        {% for item in nav.top %}
+        <a class="{{ 'active' if item.is_active else '' }}" href="{{ item.url }}">{{ item.label }}</a>
+        {% endfor %}
+    </div>
+
+    <h1>Trending....</h1> <!--this is the page TITLE -->
+   
+
+    <table id="table1">
+        <tr>
+            <th>Posts</th>  <!--this is the column name -->
+        </tr>
+
+        <!-- Loop through and display all rows from the SQL query -->
+        {% for row in records %}
+        <tr>
+            <td>{{ row.post }}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
